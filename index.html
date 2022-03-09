@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-div">
+      <h1>expense tracker</h1>
+      <div class="inner-div">
+        <div class="transaction">
+          <h2 class="balance-container">Balance : ₹49750</h2>
+          <div class="balance">
+            <div class="income">
+              <h3>income</h3>
+              <p class="income-container">+₹50000</p>
+            </div>
+            <div class="expense">
+              <h3>expense</h3>
+              <p class="expense-container">-₹250</p>
+            </div>
+          </div>
+          <hr />
+          <div class="new-transaction">
+            <h2>new transaction</h2>
+            <input
+              type="text"
+              name="expense"
+              id="expense"
+              placeholder="Enter Expense"
+            />
+            <input
+              type="text"
+              name="amount"
+              id="amount"
+              placeholder="Enter Amount"
+            />
+            <button class="btn" onclick="addTransaction()">
+              add transaction
+            </button>
+          </div>
+        </div>
+        <div class="transaction-history">
+          <h2>transaction history</h2>
+          <div class="history" style="background: red">
+            <p>
+              <button class="btn" id="1" onclick="removeTransaction(this.id)">
+                delete
+              </button>
+            </p>
+            <p>samosa</p>
+            <p>-100</p>
+          </div>
+          <div class="history" style="background: green">
+            <p>
+              <button class="btn" id="2" onclick="removeTransaction(this.id)">
+                delete
+              </button>
+            </p>
+            <p>scholarship</p>
+            <p>+50000</p>
+          </div>
+          <div class="history" style="background: red">
+            <p>
+              <button class="btn" id="3" onclick="removeTransaction(this.id)">
+                delete
+              </button>
+            </p>
+            <p>momos</p>
+            <p>-150</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
